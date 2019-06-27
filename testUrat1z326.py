@@ -30,10 +30,10 @@ col = ['RA', 'spd', 'sigs', 'sigm', 'nst', 'nsu', 'epoc', 'mmag', 'sigp', 'nsm',
 #for files in os.listdir(z_catalog):
 #for root, dirs, files in os.walk(z_catalog):
 zfiles = [f for f in os.listdir(z_catalog) if f.startswith("z")]
-print(zfiles)
+#print(zfiles)
     #print("Find {} z files in {} ".format(len(zfiles), z_catalog)) 
 for z_files in zfiles:
-    full_name_path = os.path.join(z_files)
+    full_name_path = os.path.join(z_catalog, z_files)
         #print(full_name_path)
     with open(full_name_path, 'rb') as fin:
         all_catalog = []
@@ -46,7 +46,7 @@ for z_files in zfiles:
                     #print(a)
                     #to_print = ("".join("{:" + "{}".format(list_str[i]) + "} " for i in range(len(list_row)))).format(*( _ for _ in list_row))
 df = pd.DataFrame(all_catalog, columns = col)
-print(df.head())
+print(df)
                     #print(to_print)
                     #with open(dump_file, 'a') as fout:
                         #fout.write(to_print +'\n')
