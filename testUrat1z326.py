@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+import psycopg2
 from sqlalchemy import create_engine
 import pandas as pd
 import numpy as np
@@ -26,9 +27,6 @@ engine = create_engine('postgresql://user:147456@158.250.29.198:5433/test2')
 
 
 
-
-
-
 # walk through files in a directory z_catalog
 
 #for root, dirs, files in os.walk(z_catalog):
@@ -47,13 +45,11 @@ for z_files in zfiles:
                     #to_print = ("".join("{:" + "{}".format(list_str[i]) + "} " for i in range(len(list_row)))).format(*( _ for _ in list_row))
 df = pd.DataFrame(all_catalog, columns = col)
 print(df)
+
+df.to_sql('table_Urat1_test', engine)
                     #print(to_print)
                     #with open(dump_file, 'a') as fout:
                         #fout.write(to_print +'\n')
-
-
-df.to_sql('table_Urat1_test', engine)
-
 
 # print number of bytes
 #s = os.path.getsize(dump_file)
