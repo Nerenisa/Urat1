@@ -9,7 +9,7 @@ import struct
 import os
 
 
-z_catalog = r"C:\Users\User\Documents\urat1test"   # folder with directories "/home/source_cat/URAT1/v12"    
+z_catalog = "/home/source_cat/URAT1/v12"         #r"C:\Users\User\Documents\urat1test"   # folder with directories "/home/source_cat/URAT1/v12"    
 binary_unpack = 'iihhBbhhhBBhhBBhhhBBihhhhhhBBBBBBhhhhhhhhhhBB'   # format characters module struct (80 bytes)
 #binary_file = 'z326'     # read file from the folder with directories 
 #dump_file = 'testW.asc'   # folder dumpfile 
@@ -44,7 +44,7 @@ for z_files in zfiles:
                 all_catalog.append(list_row)
                     #to_print = ("".join("{:" + "{}".format(list_str[i]) + "} " for i in range(len(list_row)))).format(*( _ for _ in list_row))
 df = pd.DataFrame(all_catalog, columns = col)
-print(df)
+print(df.head())
 
 df.to_sql('table_Urat1_test', con=pg_engine)
 pg_df = pd.read_sql(psql, con=pg_engine)
