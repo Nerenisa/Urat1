@@ -28,28 +28,27 @@ for z_files in zfiles:
         while din:
             din = fin.read(80)
             if len(din) == 80:
-                list_row = struct.unpack(binary_unpack, din) 
-                qq=list(list_row)
-                qq[1] = round(qq[1] / 3600000-90, 7)
-                qq[0] = round(qq[0] / 3600000, 7)
-                qq[7] = qq[7] / 1000
-                qq[21] = qq[21] / 1000
-                qq[22] = qq[22] / 1000
-                qq[23] = qq[23] / 1000
-                qq[33] = qq[33] / 1000
-                qq[34] = qq[34] / 1000
-                qq[35] = qq[35] / 1000
-                qq[36] = qq[36] / 1000
-                qq[37] = qq[37] / 1000
-                #print(qq)  #=list_row[1]/3600000
-                all_catalog.append(qq)
+                list_row = list(struct.unpack(binary_unpack, din)) 
+                list_row[0] = round(list_row[0] / 3600000, 7)
+                list_row[1] = round(list_row[1] / 3600000-90, 7)
+                list_row[7] = list_row[7] / 1000
+                list_row[21] = list_row[21] / 1000
+                list_row[22] = list_row[22] / 1000
+                list_row[23] = list_row[23] / 1000
+                list_row[33] = list_row[33] / 1000
+                list_row[34] = list_row[34] / 1000
+                list_row[35] = list_row[35] / 1000
+                list_row[36] = list_row[36] / 1000
+                list_row[37] = list_row[37] / 1000
+                #print(list_row)
+                all_catalog.append(list_row)
         df = pd.DataFrame(all_catalog, columns = col)
         #print(df)
         if counter_w == 0:
-            df.to_sql('urat1', con=pg_engine)
+            df.to_sql('urat1', con=pg_engine, index=False)
             counter_w = 1
         else:
-            df.to_sql('urat1', con=pg_engine, if_exists='append')
+            df.to_sql('urat1', con=pg_engine, index=False, if_exists='append')
 
 pg_df = pd.read_sql_query(psql, con=pg_engine)
 print(pg_df)
