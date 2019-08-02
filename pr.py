@@ -28,12 +28,15 @@ for z_files in zfiles:
                 list_row = list(struct.unpack(binary_unpack, din))
                 all_catalog.append(list_row)
                 n = n + 1
-                s.append(n)
-        for f in s:
-            print(f)
+                s.append(str(n).zfill(6))       
+            #print(f)
         zn = ''.join((z_files.lstrip('z'), '-')).split() * all_catalog.__len__()  # new
         for zin in zn:
-            idn.append(''.join((zin, str(f))))
+            for f in s:
+                idn.append(''.join((zin, str(f))))
+                
+               
+                    
             #print(idn)
             #print(e)
 
