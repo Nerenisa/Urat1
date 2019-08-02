@@ -8,7 +8,7 @@ import numpy as np
 import struct
 import os
 
-z_catalog = r"C:\Users\User\Documents\urat1test"
+z_catalog = r"R:\Git_hub"
 binary_unpack = 'iihhBbhhhBBhhBBhhhBBihhhhhhBBBBBBhhhhhhhhhhBB'
 col = ['RA', 'spd', 'sigs', 'sigm', 'nst', 'nsu', 'epoc', 'mmag', 'sigp', 'nsm', 'ref', 'nit', 'niu', 'ngt', 'ngu', 'pmr', 'pmd', 'pme', 'mf2', 'mfa', 'id2', 'jmag', 'hmag', 'kmag', 'ejmag', 'ehmag', 'ekmag', 'iccj', 'icch', 'icck', 'phqj', 'phqh', 'phqk', 'abm', 'avm', 'agm', 'arm', 'aim', 'ebm', 'evm', 'egm', 'erm', 'eim', 'ann', 'ano']
 
@@ -20,7 +20,6 @@ for z_files in zfiles:
         din = True
         n = 0
         all_catalog = []   
-        idn = []      # new 
         s = []     # new
         while din:
             din = fin.read(80)
@@ -31,9 +30,7 @@ for z_files in zfiles:
                 s.append(str(n).zfill(6))       
             #print(f)
         zn = ''.join((z_files.lstrip('z'), '-')).split() * all_catalog.__len__()  # new
-        for zin in zn:
-            for f in s:
-                idn.append(''.join((zin, str(f))))
+        idn = [ zn[i] + s[i] for i in range(len(s))]
                 
                
                     
