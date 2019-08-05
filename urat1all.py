@@ -13,7 +13,7 @@ z_catalog = "/home/source_cat/URAT1/v12"         #r"C:\Users\User\Documents\urat
 binary_unpack = 'iihhBbhhhBBhhBBhhhBBihhhhhhBBBBBBhhhhhhhhhhBB'   # format characters module struct (80 bytes)
 col = ['RA', 'spd', 'sigs', 'sigm', 'nst', 'nsu', 'epoc', 'mmag', 'sigp', 'nsm', 'ref', 'nit', 'niu', 'ngt', 'ngu', 'pmr', 'pmd', 'pme', 'mf2', 'mfa', 'id2', 'jmag', 'hmag', 'kmag', 'ejmag', 'ehmag', 'ekmag', 'iccj', 'icch', 'icck', 'phqj', 'phqh', 'phqk', 'abm', 'avm', 'agm', 'arm', 'aim', 'ebm', 'evm', 'egm', 'erm', 'eim', 'ann', 'ano']
 pg_engine = create_engine('postgresql+psycopg2://user@localhost:5433/test2')
-psql = 'select * from "urat1" limit 300;'
+psql = 'select * from "urat1.2" limit 300;'
 
 
 counter_w=0
@@ -24,7 +24,9 @@ for z_files in zfiles:
     full_name_path = os.path.join(z_catalog, z_files)
     with open(full_name_path, 'rb') as fin:
         din = True
-        all_catalog = []
+        n = 0
+        all_catalog = []   # creating a temporary list of decoded binary directory strings z326....z900
+        s = []    # creation of a temporary list from binary directory line numbering z326....z900
         while din:
             din = fin.read(80)
             if len(din) == 80:
@@ -42,13 +44,17 @@ for z_files in zfiles:
                 list_row[37] = list_row[37] / 1000
                 #print(list_row)
                 all_catalog.append(list_row)
-        df = pd.DataFrame(all_catalog, columns = col)
+                n = n + 1
+                s.append(str(n).zfill(6))
+        zn = ''.join((z_files.lstrip('z'), '-')).split() * all_catalog.__len__() 
+        idn = [ zn[i] + s[i] for i in range(len(s))]  
+        df = pd.DataFrame(all_catalog, index = idn, columns = col)
         #print(df)
         if counter_w == 0:
-            df.to_sql('urat1', con=pg_engine, index=False)
+            df.to_sql('urat1.2', con=pg_engine)
             counter_w = 1
         else:
-            df.to_sql('urat1', con=pg_engine, index=False, if_exists='append')
+            df.to_sql('urat1.2', con=pg_engine, if_exists='append')
 
 pg_df = pd.read_sql_query(psql, con=pg_engine)
 print(pg_df)
