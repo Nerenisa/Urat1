@@ -33,6 +33,7 @@ for z_files in zfiles:
                 list_row = list(struct.unpack(binary_unpack, din)) 
                 list_row[0] = round(list_row[0] / 3600000, 7)
                 list_row[1] = round(list_row[1] / 3600000-90, 7)
+                list_row[6] = list_row[6] / 1000 + 2000
                 list_row[7] = list_row[7] / 1000
                 list_row[21] = list_row[21] / 1000
                 list_row[22] = list_row[22] / 1000
