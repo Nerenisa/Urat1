@@ -9,7 +9,7 @@ import struct
 import os
 
 
-z_catalog = r"C:\Users\User\Documents\urat1test"   # folder with directories "/home/source_cat/URAT1/v12"    
+z_catalog = "/home/source_cat/URAT1/v12"   # folder with directories "/home/source_cat/URAT1/v12"    
 binary_unpack = 'iihhBbhhhBBhhBBhhhBBihhhhhhBBBBBBhhhhhhhhhhBB'   # format characters module struct (80 bytes)
 #binary_file = 'z326'     # read file from the folder with directories 
 #dump_file = 'testW.asc'   # folder dumpfile 
