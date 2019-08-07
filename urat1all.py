@@ -48,7 +48,7 @@ for z_files in zfiles:
                 n = n + 1
                 s.append(str(n).zfill(6))
         zn = ''.join((z_files.lstrip('z'), '-')).split() * all_catalog.__len__() 
-        idn = [ zn[i] + s[i] for i in range(len(s))]  
+        idn = [zn[i] + s[i] for i in range(len(s))]  
         df = pd.DataFrame(all_catalog, index = idn, columns = col)
         #print(df)
         if counter_w == 0:

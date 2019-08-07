@@ -21,21 +21,21 @@ binary_unpack = 'iihhBbhhhBBhhBBhhhBBihhhhhhBBBBBBhhhhhhhhhhBB'   # format chara
                 #icch, icck, phqj, phqh, phqk, abm, \
                 #avm, agm, arm, aim, ebm, evm, egm, '
                 #erm, eim, ann, ano'      # tuple of table columns
-col = ['RA', 'spd', 'sigs', 'sigm', 'nst', 'nsu', 'epoc', 'mmag', 'sigp', 'nsm', 'ref', 'nit', 'niu', 'ngt', 'ngu', 'pmr', 'pmd', 'pme', 'mf2', 'mfa', 'id2', 'jmag', 'hmag', 'kmag', 'ejmag', 'ehmag', 'ekmag', 'iccj', 'icch', 'icck', 'phqj', 'phqh', 'phqk', 'abm', 'avm', 'agm', 'arm', 'aim', 'ebm', 'evm', 'egm', 'erm', 'eim', 'ann', 'ano']
+col = ['ra', 'spd', 'sigs', 'sigm', 'nst', 'nsu', 'epoc', 'mmag', 'sigp', 'nsm', 'ref', 'nit', 'niu', 'ngt', 'ngu', 'pmr', 'pmd', 'pme', 'mf2', 'mfa', 'id2', 'jmag', 'hmag', 'kmag', 'ejmag', 'ehmag', 'ekmag', 'iccj', 'icch', 'icck', 'phqj', 'phqh', 'phqk', 'abm', 'avm', 'agm', 'arm', 'aim', 'ebm', 'evm', 'egm', 'erm', 'eim', 'ann', 'ano']
 #list_str = [10, 9, 3, 3, 2, 3, 5, 5, 3, 2, 1, 3, 3, 3, 3, 5, 5, 3, 2, 2, 10, 5, 5, 5, 4, 4, 4, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 3, 3]
-#pg_engine = create_engine('postgresql+psycopg2://user:147456@158.250.29.198:5433/test2')
-#psql = 'select * from table_Urat1_test limit 5;'
+pg_engine = create_engine('postgresql+psycopg2://user@localhost:5433/test2')
+psql = 'select * from "urat1.3";'
 
 
 # walk through files in a directory z_catalog
 
 #for root, dirs, files in os.walk(z_catalog):
-zfiles = [f for f in os.listdir(z_catalog) if f.startswith("z")]
+zfiles = [f for f in os.listdir(z_catalog) if f.startswith("z326")]
 #print("Find {} z files in {} ".format(len(zfiles), z_catalog)) 
-all_catalog = []
 for z_files in zfiles:
     full_name_path = os.path.join(z_catalog, z_files)
     with open(full_name_path, 'rb') as fin:
+        all_catalog = []
         din = True
         while din:
             din = fin.read(80)
@@ -45,17 +45,19 @@ for z_files in zfiles:
 #print(all_catalog)
    
                     #to_print = ("".join("{:" + "{}".format(list_str[i]) + "} " for i in range(len(list_row)))).format(*( _ for _ in list_row))
-df = pd.DataFrame(all_catalog, columns = col)
-print(df)
+        df = pd.DataFrame(all_catalog, index=False, columns = col)
+#print(df)
+        counter_w=0
+        if counter_w == 0:
+            df.to_sql('urat1.3', con=pg_engine)
+            counter_w = 1
+        else:
+            df.to_sql('urat1.3', con=pg_engine, if_exists='append')
 
-#df.to_sql('table_Urat1_test', con=pg_engine)
-#pg_df = pd.read_sql_query(psql, con=pg_engine)
-#print(pg_df)
+
+
 
                     #print(to_print)
                     #with open(dump_file, 'a') as fout:
                         #fout.write(to_print +'\n')
 
-# print number of bytes
-#s = os.path.getsize(dump_file)
-#print (s)
