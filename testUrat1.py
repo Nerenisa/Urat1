@@ -45,14 +45,10 @@ for z_files in zfiles:
 #print(all_catalog)
    
                     #to_print = ("".join("{:" + "{}".format(list_str[i]) + "} " for i in range(len(list_row)))).format(*( _ for _ in list_row))
-        df = pd.DataFrame(all_catalog, index=False, columns = col)
+        df = pd.DataFrame(all_catalog, columns = col)
 #print(df)
-        counter_w=0
-        if counter_w == 0:
-            df.to_sql('urat1.3', con=pg_engine)
-            counter_w = 1
-        else:
-            df.to_sql('urat1.3', con=pg_engine, if_exists='append')
+        df.to_sql('urat1.3', index=False, con=pg_engine)
+            
 
 
 
