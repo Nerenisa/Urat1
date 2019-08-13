@@ -25,10 +25,10 @@ for z_files in zfiles:
     with open(full_name_path, 'rb') as fin:
         din = True
         n = 0
-        all_catalog = []   # creating a temporary list of decoded binary directory strings z326....z900
-        s = []    # creation of a temporary list from binary directory line numbering z326....z900
+        all_catalog = []   # creating a temporary list of decoded binary catalogs strings z326....z900
+        s = []    # creation of a temporary list from binary catalogs line numbering z326....z900
         while din:
-            din = fin.read(80)
+            din = fin.read(80)   # 80 bytes one row
             if len(din) == 80:
                 list_row = list(struct.unpack(binary_unpack, din)) 
                 list_row[0] = round(list_row[0] / 3600000, 7)
@@ -49,7 +49,7 @@ for z_files in zfiles:
                 s.append(str(n).zfill(6))
         zn = ''.join((z_files.lstrip('z'), '-')).split() * all_catalog.__len__() 
         idn = [zn[i] + s[i] for i in range(len(s))]  
-        df = pd.DataFrame(all_catalog, index = idn, columns = col)
+        df = pd.DataFrame(all_catalog, index = idn, columns = col)  # Create a dataframe wrapper for the table
         #print(df)
         if counter_w == 0:
             df.to_sql('urat1.2', con=pg_engine)
