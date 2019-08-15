@@ -24,21 +24,24 @@ b | signed char   | integer | 1 | nsu
   <th>item</th>
   <th>type</th>
   <th>unit</th>
-  <th>description and notes</th>
+  <th>description</th>
+  <th>notes<th>
   </tr>
  <tr>
   <td>1</td>
   <td>ra</td>
   <td>i*4</td>
   <td>mas</td>
-  <td>mean RA on ICRF at URAT mean obs.epoch  (1)</td>
+  <td>mean RA on ICRF at URAT mean obs.epoch</td>
+  <th>(1)<th>
  </tr>
 <tr>
   <td>2</td>
   <td>spd</td>
   <td>i*4</td>
   <td>mas</td>
-  <td>mean South Pole Distance = Dec + 90 deg  (2)</td>
+  <td>mean South Pole Distance = Dec + 90 deg</td>
+  <th>(2)<th>
 </tr>
 <tr>
   <td>3</td>
@@ -46,6 +49,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mas</td>
   <td>position error per coord. from scatter</td>
+  <th><th>
 </tr>
 <tr>
   <td>4</td>
@@ -53,6 +57,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mas</td>
   <td>position error per coord. from model</td>
+  <th><th>
 </tr>
 <tr>
   <td>5</td>
@@ -60,6 +65,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>tot. number of sets the star is in </td>
+  <th><th>
 </tr>
 <tr>
   <td>6</td>
@@ -67,20 +73,23 @@ b | signed char   | integer | 1 | nsu
   <td>b*1</td>
   <td>--</td>
   <td>n. of sets used for mean position + flag </td>
+  <th><th>
 </tr>
 <tr>
   <td>7</td>
   <td>epoc</td>
   <td>h*2</td>
   <td>myr</td>
-  <td>mean URAT obs. epoch - 2000.0  (3)</td>
+  <td>mean URAT obs. epoch - 2000.0</td>
+  <th>(3)<th>
 </tr>
 <tr>
   <td>8</td>
   <td>mmag</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>mean URAT model fit magnitude  (4)</td>
+  <td>mean URAT model fit magnitude</td>
+  <th>(4)<th>
 </tr>
 <tr>
   <td>9</td>
@@ -88,13 +97,15 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>URAT photometry error</td>
+  <th><th>
 </tr>
 <tr>
   <td>10</td>
   <td>nsm</td>
   <td>B*1</td>
   <td>--</td>
-  <td>number of sets used for URAT magnitude </td>
+  <td>number of sets used for URAT magnitude</td>
+  <th><th>
 </tr>
 <tr>
   <td>11</td>
@@ -102,6 +113,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>largest reference star flag</td>
+  <th><th>
 </tr>
 <tr>
   <td>12</td>
@@ -109,6 +121,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>--</td>
   <td>total number of images (observations)</td>
+  <th><th>
 </tr>
 <tr>
   <td>13</td>
@@ -116,6 +129,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>--</td>
   <td>number of images used for mean position</td>
+  <th><th>
 </tr>
 <tr>
   <td>14</td>
@@ -123,6 +137,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>total number of 1st order grating obs.</td>
+  <th><th>
 </tr>
 <tr>
   <td>15</td>
@@ -130,6 +145,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>number of 1st order grating positions used</td>
+  <th><th>
 </tr>
 <tr>
   <td>16</td>
@@ -137,6 +153,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>0.1mas/yr</td>
   <td>proper motion RA*cosDec (from 2MASS)</td>
+  <th><th>
 </tr>
 <tr>
   <td>17</td>
@@ -144,6 +161,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>0.1mas/yr</td>
   <td>proper motion Dec</td>
+  <th><th>
 </tr>
 <tr>
   <td>18</td>
@@ -151,13 +169,15 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>0.1mas/yr</td>
   <td>proper motion error per coordinate</td>
+  <th><th>
 </tr>
 <tr>
   <td>19</td>
   <td>mf2</td>
   <td>B*1</td>
   <td>--</td>
-  <td>match flag URAT with 2MASS </td>
+  <td>match flag URAT with 2MASS</td>
+  <th><th>
 </tr>
 <tr>
   <td>20</td>
@@ -165,6 +185,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>match flag URAT with APASS</td>
+  <th><th>
 </tr>
 <tr>
   <td>21</td>
@@ -172,27 +193,31 @@ b | signed char   | integer | 1 | nsu
   <td>i*4</td>
   <td>--</td>
   <td>unique 2MASS star identification number</td>
+  <th><th>
 </tr>
 <tr>
   <td>22</td>
   <td>jmag</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>2MASS J mag  (5)</td>
+  <td>2MASS J mag</td>
+  <th>(5)<th>
 </tr>
 <tr>
   <td>23</td>
   <td>hmag</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>2MASS H mag  (6)</td>
+  <td>2MASS H mag</td>
+  <th>(6)<th>
 </tr>
 <tr>
   <td>24</td>
   <td>kmag</td>
   <td>h*2 </td>
   <td>mmag</td>
-  <td>2MASS K mag  (7)</td>
+  <td>2MASS K mag</td>
+  <th>(7)<th>
 </tr>
 <tr>
   <td>25</td>
@@ -200,6 +225,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error 2MASS J mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>26</td>
@@ -207,6 +233,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error 2MASS H mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>27</td>
@@ -214,6 +241,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error 2MASS K mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>28</td>
@@ -221,6 +249,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>CC flag 2MASS</td>
+  <th><th>
 </tr>
 <tr>
   <td>29</td>
@@ -228,6 +257,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>CC flag 2MASS H</td>
+  <th><th>
 </tr>
 <tr>
   <td>30</td>
@@ -235,6 +265,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>CC flag 2MASS K</td>
+  <th><th>
 </tr>
 <tr>
   <td>31</td>
@@ -242,6 +273,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>photometry quality flag 2MASS J</td>
+  <th><th>
 </tr>
 <tr>
   <td>32</td>
@@ -249,6 +281,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>photometry quality flag 2MASS H</td>
+  <th><th>
 </tr>
 <tr>
   <td>33</td>
@@ -256,41 +289,47 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>photometry quality flag 2MASS K</td>
+  <th><th>
 </tr>
 <tr>
   <td>34</td>
   <td>abm</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>APASS B mag  (8)</td>
+  <td>APASS B mag</td>
+  <th>(8)<th>
 </tr>
 <tr>
   <td>35</td>
   <td>avm</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>APASS V mag  (9)</td>
+  <td>APASS V mag</td>
+  <th>(9)<th>
 </tr>
 <tr>
   <td>36</td>
   <td>agm</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>APASS g mag  (10)</td>
+  <td>APASS g mag</td>
+  <th>(10)<th>
 </tr>
 <tr>
   <td>37</td>
   <td>arm</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>APASS r mag  (11)</td>
+  <td>APASS r mag</td>
+  <th>(11)<th>
 </tr>
 <tr>
   <td>38</td>
   <td>aim</td>
   <td>h*2</td>
   <td>mmag</td>
-  <td>APASS i mag  (12)</td>
+  <td>APASS i mag</td>
+  <th>(12)<th>
 </tr>
 <tr>
   <td>39</td>
@@ -298,6 +337,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS B mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>40</td>
@@ -305,6 +345,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS V mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>41</td>
@@ -312,6 +353,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS g mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>42</td>
@@ -319,6 +361,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2 </td>
   <td>mma</td>
   <td>g	error APASS r mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>43</td>
@@ -326,6 +369,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS i mag</td>
+  <th><th>
 </tr>
 <tr>
   <td>44</td>
@@ -333,6 +377,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td>APASS numb. of nights</td>
+  <th><th>
 </tr>
 <tr>
   <td>45</td>
@@ -340,6 +385,7 @@ b | signed char   | integer | 1 | nsu
   <td>B*1</td>
   <td>--</td>
   <td> APASS numb. of observ.</td>
+  <th><th>
 </tr>
 </table>
     	  		                      
