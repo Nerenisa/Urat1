@@ -31,8 +31,7 @@ b | signed char   | integer | 1 | nsu
   <td>ra</td>
   <td>i*4</td>
   <td>mas</td>
-  <td>mean</td>
-  <td>RA on ICRF at URAT mean obs.epoch  (1)</td>
+  <td>mean RA on ICRF at URAT mean obs.epoch  (1)</td>
  </tr>
 <tr>
   <td>2</td>
