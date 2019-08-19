@@ -49,7 +49,7 @@ b | signed char   | integer | 1 | nsu
   <td>h*2</td>
   <td>mas</td>
   <td>position error per coord. from scatter</td>
-  <th>--<th>
+  <th><th>
 </tr>
 <tr>
   <td>4</td>
