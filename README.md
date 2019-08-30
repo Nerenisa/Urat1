@@ -389,12 +389,16 @@ b | signed char   | integer | 1 | nsu
 </tr>
 </table>
 
+<<<<<<< HEAD
 caption {
 caption-side: bottom;
 text-align: right;
 padding: 10px 0; 
 font-size: 14px;
 }
+=======
+
+>>>>>>> 0af4a25118ec83b5867dc75a4a89d701f7c78e44
     	  		                      
 80 = total number of bytes per star record
 
