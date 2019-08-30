@@ -1,4 +1,3 @@
-<! DOCTYPE html>
 # Urat1
 The first U.S. Naval Observatory Astrometric Robotic Telescope Catalog (URAT1)
 
@@ -9,30 +8,16 @@ Decoded information is converted to a table and written to the postgresql databa
 items to read from input files:
      
 i | int           | integer | 4 | ra, spd, id2
-
+***
 h | short         | integer | 2 | sigs, sigm, epoc, mmag, sigp, nit, niu, pmr, pmd, pme, jmag, 
                                   hmag, kmag, ejmag, ehmag, ekmag, abm, avm, agm, arm, aim
-                                  
+***                                  
 B | unsigned char | integer | 1 | nst, nsm, ref, ngt, ngu, mf2, mfa, iccj, icch, icck, phqj,
                                   phqh, phqk, ann, ano, ebm, evm, egm, erm, eim
-                                  
+***                                  
 b | signed char   | integer | 1 | nsu
-
+***
 			
-<html>
-<style>
-  table {border: 1px solid #69c;}
-th {
-  font-weight: normal;
-  color: #039;
-  border-bottom: 1px dashed #69c;
-  padding: 12px 17px;
-}
-td {
-  color: #669;
-  padding: 7px 17px;
-}
-</style>
 <table>
 <tr>
   <th>column</th>
@@ -61,7 +46,6 @@ td {
   <td>h*2</td>
   <td>mas</td>
   <td>position error per coord. from scatter</td>
-  <th><th>
 </tr>
 <tr>
   <td>4</td>
@@ -69,7 +53,6 @@ td {
   <td>h*2</td>
   <td>mas</td>
   <td>position error per coord. from model</td>
-  <th><th>
 </tr>
 <tr>
   <td>5</td>
@@ -77,7 +60,6 @@ td {
   <td>B*1</td>
   <td>--</td>
   <td>tot. number of sets the star is in </td>
-  <th><th>
 </tr>
 <tr>
   <td>6</td>
@@ -85,7 +67,6 @@ td {
   <td>b*1</td>
   <td>--</td>
   <td>n. of sets used for mean position + flag </td>
-  <th><th>
 </tr>
 <tr>
   <td>7</td>
