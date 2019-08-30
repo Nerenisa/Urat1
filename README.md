@@ -19,6 +19,21 @@ b | signed char   | integer | 1 | nsu
 
 			
 <table>
+<style>
+table {border: 1px solid #69c;}
+th {
+  font-weight: normal;
+  color: #039;
+  border-bottom: 1px dashed #69c;
+  padding: 12px 17px;
+}
+td {
+  color: #669;
+  padding: 7px 17px;
+}
+tr:hover td {background: #ccddff;}
+</style>
+
 <tr>
   <th>column</th>
   <th>item</th>
@@ -389,13 +404,9 @@ b | signed char   | integer | 1 | nsu
 </tr>
 </table>
 
-caption {
-caption-side: bottom;
-text-align: right;
-padding: 10px 0; 
-font-size: 14px;
-}
-    	  		                      
+
+
+
 80 = total number of bytes per star record
 
 
