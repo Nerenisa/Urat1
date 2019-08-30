@@ -1,3 +1,4 @@
+<! DOCTYPE html>
 # Urat1
 The first U.S. Naval Observatory Astrometric Robotic Telescope Catalog (URAT1)
 
@@ -18,9 +19,9 @@ B | unsigned char | integer | 1 | nst, nsm, ref, ngt, ngu, mf2, mfa, iccj, icch,
 b | signed char   | integer | 1 | nsu
 
 			
-<table>
+<html>
 <style>
-table {border: 1px solid #69c;}
+  table {border: 1px solid #69c;}
 th {
   font-weight: normal;
   color: #039;
@@ -31,16 +32,14 @@ td {
   color: #669;
   padding: 7px 17px;
 }
-tr:hover td {background: #ccddff;}
 </style>
-
+<table>
 <tr>
   <th>column</th>
   <th>item</th>
   <th>type</th>
   <th>unit</th>
   <th>description</th>
-  <th>notes<th>
   </tr>
  <tr>
   <td>1</td>
@@ -48,7 +47,6 @@ tr:hover td {background: #ccddff;}
   <td>i*4</td>
   <td>mas</td>
   <td>mean RA on ICRF at URAT mean obs.epoch</td>
-  <th>(1)<th>
  </tr>
 <tr>
   <td>2</td>
@@ -56,7 +54,6 @@ tr:hover td {background: #ccddff;}
   <td>i*4</td>
   <td>mas</td>
   <td>mean South Pole Distance = Dec + 90 deg</td>
-  <th>(2)<th>
 </tr>
 <tr>
   <td>3</td>
@@ -96,7 +93,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>myr</td>
   <td>mean URAT obs. epoch - 2000.0</td>
-  <th>(3)<th>
 </tr>
 <tr>
   <td>8</td>
@@ -104,7 +100,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>mean URAT model fit magnitude</td>
-  <th>(4)<th>
 </tr>
 <tr>
   <td>9</td>
@@ -112,7 +107,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>URAT photometry error</td>
-  <th><th>
 </tr>
 <tr>
   <td>10</td>
@@ -120,7 +114,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>number of sets used for URAT magnitude</td>
-  <th><th>
 </tr>
 <tr>
   <td>11</td>
@@ -128,7 +121,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>largest reference star flag</td>
-  <th><th>
 </tr>
 <tr>
   <td>12</td>
@@ -136,7 +128,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>--</td>
   <td>total number of images (observations)</td>
-  <th><th>
 </tr>
 <tr>
   <td>13</td>
@@ -144,7 +135,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>--</td>
   <td>number of images used for mean position</td>
-  <th><th>
 </tr>
 <tr>
   <td>14</td>
@@ -152,7 +142,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>total number of 1st order grating obs.</td>
-  <th><th>
 </tr>
 <tr>
   <td>15</td>
@@ -160,7 +149,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>number of 1st order grating positions used</td>
-  <th><th>
 </tr>
 <tr>
   <td>16</td>
@@ -168,7 +156,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>0.1mas/yr</td>
   <td>proper motion RA*cosDec (from 2MASS)</td>
-  <th><th>
 </tr>
 <tr>
   <td>17</td>
@@ -176,7 +163,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>0.1mas/yr</td>
   <td>proper motion Dec</td>
-  <th><th>
 </tr>
 <tr>
   <td>18</td>
@@ -184,7 +170,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>0.1mas/yr</td>
   <td>proper motion error per coordinate</td>
-  <th><th>
 </tr>
 <tr>
   <td>19</td>
@@ -192,7 +177,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>match flag URAT with 2MASS</td>
-  <th><th>
 </tr>
 <tr>
   <td>20</td>
@@ -200,7 +184,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>match flag URAT with APASS</td>
-  <th><th>
 </tr>
 <tr>
   <td>21</td>
@@ -208,7 +191,6 @@ tr:hover td {background: #ccddff;}
   <td>i*4</td>
   <td>--</td>
   <td>unique 2MASS star identification number</td>
-  <th><th>
 </tr>
 <tr>
   <td>22</td>
@@ -216,7 +198,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>2MASS J mag</td>
-  <th>(5)<th>
 </tr>
 <tr>
   <td>23</td>
@@ -224,7 +205,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>2MASS H mag</td>
-  <th>(6)<th>
 </tr>
 <tr>
   <td>24</td>
@@ -232,7 +212,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2 </td>
   <td>mmag</td>
   <td>2MASS K mag</td>
-  <th>(7)<th>
 </tr>
 <tr>
   <td>25</td>
@@ -240,7 +219,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error 2MASS J mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>26</td>
@@ -248,7 +226,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error 2MASS H mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>27</td>
@@ -256,7 +233,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error 2MASS K mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>28</td>
@@ -264,7 +240,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>CC flag 2MASS</td>
-  <th><th>
 </tr>
 <tr>
   <td>29</td>
@@ -272,7 +247,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>CC flag 2MASS H</td>
-  <th><th>
 </tr>
 <tr>
   <td>30</td>
@@ -280,7 +254,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>CC flag 2MASS K</td>
-  <th><th>
 </tr>
 <tr>
   <td>31</td>
@@ -288,7 +261,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>photometry quality flag 2MASS J</td>
-  <th><th>
 </tr>
 <tr>
   <td>32</td>
@@ -296,7 +268,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>photometry quality flag 2MASS H</td>
-  <th><th>
 </tr>
 <tr>
   <td>33</td>
@@ -304,7 +275,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>photometry quality flag 2MASS K</td>
-  <th><th>
 </tr>
 <tr>
   <td>34</td>
@@ -312,7 +282,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>APASS B mag</td>
-  <th>(8)<th>
 </tr>
 <tr>
   <td>35</td>
@@ -320,7 +289,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>APASS V mag</td>
-  <th>(9)<th>
 </tr>
 <tr>
   <td>36</td>
@@ -328,7 +296,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>APASS g mag</td>
-  <th>(10)<th>
 </tr>
 <tr>
   <td>37</td>
@@ -336,7 +303,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>APASS r mag</td>
-  <th>(11)<th>
 </tr>
 <tr>
   <td>38</td>
@@ -344,7 +310,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>APASS i mag</td>
-  <th>(12)<th>
 </tr>
 <tr>
   <td>39</td>
@@ -352,7 +317,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS B mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>40</td>
@@ -360,7 +324,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS V mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>41</td>
@@ -368,7 +331,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS g mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>42</td>
@@ -376,7 +338,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2 </td>
   <td>mma</td>
   <td>g	error APASS r mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>43</td>
@@ -384,7 +345,6 @@ tr:hover td {background: #ccddff;}
   <td>h*2</td>
   <td>mmag</td>
   <td>error APASS i mag</td>
-  <th><th>
 </tr>
 <tr>
   <td>44</td>
@@ -392,7 +352,6 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td>APASS numb. of nights</td>
-  <th><th>
 </tr>
 <tr>
   <td>45</td>
@@ -400,10 +359,9 @@ tr:hover td {background: #ccddff;}
   <td>B*1</td>
   <td>--</td>
   <td> APASS numb. of observ.</td>
-  <th><th>
 </tr>
 </table>
-
+</html>
 
 
 
